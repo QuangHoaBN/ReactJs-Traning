@@ -31,9 +31,10 @@ class Content extends React.Component {
 				<button onClick={this.decrease}>-</button>
 				<p>Number: {this.state.number}</p>
 				<button onClick={()=>this.increase()}>+</button>
+				<br></br>
 				<input value={this.state.value} onChange={this.handleChange}></input>
 				<button onClick={this.showName}>Show Name</button>
-				{this.state.name} && <p>My name is: {this.state.name} </p>
+				<p>My name is: {this.state.name} </p>
 				<ListDevice/>
 			</div>	
 		);
