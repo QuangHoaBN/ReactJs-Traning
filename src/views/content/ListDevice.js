@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Items from './items.js';
 
 export default class ListDevice extends Component {
     constructor(props) {
@@ -40,10 +41,9 @@ export default class ListDevice extends Component {
         return (
             <div>
                 <p>List devices</p>
-                 <table>
+                 <table width>
 				  <thead>
 				    <tr>
-				      <th>STT</th>
 				      <th>ID</th>
 				      <th>Name</th>
 					  <th>Brand</th>
@@ -52,13 +52,13 @@ export default class ListDevice extends Component {
 				  </thead>
 				  <tbody>
 				    {this.state.devices.map((value, index) => (
-				    	<tr key={index}>
-							<td>{index}</td>
-							<td>{value.user_id}</td>
-							<td>{value.name}</td>
-							<td>{value.brand}</td>
-							<td>{value.ip}</td>
-				    	</tr>	
+                        <Items 
+                        name={value.name} 
+                        brand={value.brand} 
+                        user_id={value.user_id} 
+                        ip={value.ip}
+                        method={() => alert(value.user_id)} 
+                        />
 				    ))}
 				  </tbody>
 				</table> 

@@ -1,14 +1,18 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Header, Footer, Content} from './views'
+import {Header, Footer, Content} from './views';
+import AppRoute from './route/AppRoute.js';
 class App extends React.Component {
   render(){
     return (
      <div>
-        <Header/>
+        {/* <Header/>
         <Content/>
-        <Footer/>
+        <Footer/> */}
+        {/* eslint-disable-next-line jsx-a11y/alt-text */}
+        <img width='100px' src={logo}></img>
+        <AppRoute />
         </div>
       )
   }

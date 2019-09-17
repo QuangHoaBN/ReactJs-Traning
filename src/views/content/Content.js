@@ -1,5 +1,6 @@
 import React from 'react';
 import ListDevice from './ListDevice.js';
+import Table from './Table.js';
 class Content extends React.Component {
 	constructor(){
 		super();
@@ -28,14 +29,16 @@ class Content extends React.Component {
 	render(){
 		return (
 			<div>
-				<button onClick={this.decrease}>-</button>
+				{/* <button onClick={this.decrease}>-</button>
 				<p>Number: {this.state.number}</p>
 				<button onClick={()=>this.increase()}>+</button>
 				<br></br>
 				<input value={this.state.value} onChange={this.handleChange}></input>
 				<button onClick={this.showName}>Show Name</button>
 				<p>My name is: {this.state.name} </p>
-				<ListDevice/>
+				<ListDevice/> */}
+				<Table />
+				
 			</div>	
 		);
 	}
